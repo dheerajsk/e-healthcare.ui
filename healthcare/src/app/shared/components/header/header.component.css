@@ -1,0 +1,22 @@
+.header{
+    font-weight: 900;
+    font-size: 24px;
+    padding: 1rem;
+    margin-top: 0.25rem;
+    color: darkslateblue;
+}
+
+.topbar{
+    position: fixed;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: darkgrey;
+    top:0;
+    width: 100%;
+    left:0;
+    padding: 0.65rem;
+}
+
+button{
+    float: right;
+}

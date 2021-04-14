@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: "login", component: ContainerComponent, loadChildren: () =>
       import("./account/account.module").then((m) => m.AccountModule)
+  }, 
+  {
+    path: "cart", component: ContainerComponent, loadChildren: () =>
+      import("./cart/cart.module").then((m) => m.CartModule)
   },
   {
     path: "", component: ContainerComponent, loadChildren: () =>

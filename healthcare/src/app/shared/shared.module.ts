@@ -9,7 +9,6 @@ import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 
-
 @NgModule({
   declarations: [ContainerComponent, HeaderComponent, FooterComponent],
   imports: [
@@ -17,6 +16,7 @@ import { CardModule } from 'primeng/card';
     RouterModule,
     MenubarModule,
     CardModule,
+    RouterModule,
     ButtonModule,
     HttpClientModule
   ]

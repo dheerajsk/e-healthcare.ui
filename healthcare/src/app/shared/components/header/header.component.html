@@ -1,7 +1,7 @@
 <div class="topbar">
     <span class="header">E-Healthcare</span>
     <div style="display: flex; float: right;">
-        <a href="javascript:void(0)"><i class="pi pi-shopping-cart"></i></a>
+        <a *ngIf="user" [routerLink]="'/cart'" href="javascript:void(0)"><i class="pi pi-shopping-cart"></i></a>
         <h6 *ngIf="user">Hello, {{user.firstName}} &nbsp;&nbsp;</h6>
         <button *ngIf="!user" type="button" (click)="handleSignIn()" pButton label="Sign In" icon="pi pi-user"
             style="margin-left:.25em"></button>

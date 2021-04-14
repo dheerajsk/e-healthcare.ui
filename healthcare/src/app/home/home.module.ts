@@ -5,13 +5,16 @@ import { SearchComponent } from './components/search/search.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './home-routing.module';
-
+import { CardModule } from 'primeng/card';
+import { SharedModule } from '../shared/shared.module';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
   declarations: [CatalogComponent, SearchComponent, ProductCardComponent, HomeComponent],
   imports: [
-    CommonModule, HomeRoutingModule
+    CommonModule, HomeRoutingModule,
+    CardModule, SharedModule, ButtonModule
   ]
 })
 export class HomeModule { }

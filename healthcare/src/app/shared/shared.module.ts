@@ -6,6 +6,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import {MenubarModule} from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
+import { HttpClientModule } from '@angular/common/http';
+import { CardModule } from 'primeng/card';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ButtonModule } from 'primeng/button';
     CommonModule,
     RouterModule,
     MenubarModule,
-    ButtonModule
+    CardModule,
+    ButtonModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

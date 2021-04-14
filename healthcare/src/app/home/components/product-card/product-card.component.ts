@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from 'src/app/cart/cart.service';
+import { ProductModel } from 'src/app/product/product.model';
 
 @Component({
   selector: 'app-product-card',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
+
+  @Input() product: ProductModel;
 
   ngOnInit(): void {
+  }
+
+  handleAddToCartClick(){
+    this.cartService.add(this.product.id).subscribe(
+      (res)=>{
+        this.cartService.notifyCartUpdate();
+      }
+    )
   }
 
 }

@@ -1,4 +1,11 @@
 <div class="topbar">
     <span class="header">E-Healthcare</span>
-    <button type="button" pButton label="Logout" icon="pi pi-power-off" style="margin-left:.25em"></button>
+    <div style="display: flex; float: right;">
+        <a href="javascript:void(0)"><i class="pi pi-shopping-cart"></i></a>
+        <h6 *ngIf="user">Hello, {{user.firstName}} &nbsp;&nbsp;</h6>
+        <button *ngIf="!user" type="button" (click)="handleSignIn()" pButton label="Sign In" icon="pi pi-user"
+            style="margin-left:.25em"></button>
+        <button *ngIf="user" type="button" (click)="handleSignOut()" pButton label="Logout" icon="pi pi-power-off"
+            style="margin-left:.25em"></button>
+    </div>
 </div>

@@ -1,7 +1,7 @@
 <p-card [header]="product.name" [subheader]="product.category.name" [style]="{width: '360px', color: 'darkslateblue'}"
     styleClass="p-card-shadow">
     <ng-template pTemplate="header">
-        <img alt="Card" [src]="product.imgSrc">
+        <img alt="Card" height="350px" [src]="product.imgSrc">
     </ng-template>
     <h6 style="color: black;">Price: {{product.price}}</h6>
     <p style="color: darkgrey;">{{product.detail}}</p>

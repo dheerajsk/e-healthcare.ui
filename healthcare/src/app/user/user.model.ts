@@ -5,4 +5,5 @@ export class UserModel{
     lastName: string;
     email: string;
     id: number;
+    isAdmin: boolean;
 }

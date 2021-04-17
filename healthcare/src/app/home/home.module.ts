@@ -8,6 +8,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { CardModule } from 'primeng/card';
 import { SharedModule } from '../shared/shared.module';
 import { ButtonModule } from 'primeng/button';
+import { MessageService } from 'primeng/api';
 
 
 @NgModule({
@@ -15,6 +16,6 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     CommonModule, HomeRoutingModule,
     CardModule, SharedModule, ButtonModule
-  ]
+  ], providers: []
 })
 export class HomeModule { }

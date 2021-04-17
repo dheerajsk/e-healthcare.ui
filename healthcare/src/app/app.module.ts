@@ -8,6 +8,9 @@ import { SharedModule } from './shared/shared.module';
 import { ButtonModule } from 'primeng/button';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiInterceptor } from './shared/http.interceptor';
+import { ListProductComponent } from './product/components/list-product/list-product.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,9 @@ import { ApiInterceptor } from './shared/http.interceptor';
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
-    ButtonModule
+    ButtonModule, ToastModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true }, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -25,6 +25,10 @@ export class CartService {
     return this.http.post(this.env.url + "Cart/Add/" + productID, {});
   }
 
+  order() {
+    return this.http.post(this.env.url + "Cart/PlaceOrder/", {});
+  }
+
   remove(productID) {
     return this.http.delete(this.env.url + "Cart/" + productID, {});
   }

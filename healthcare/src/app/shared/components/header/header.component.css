@@ -6,8 +6,20 @@
     color: darkslateblue;
 }
 
+.menu{
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    color: darkslateblue;
+}
+
+
 a{
     margin: auto;
+}
+
+span{
+    cursor: pointer;
 }
 
 i{

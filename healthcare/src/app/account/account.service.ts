@@ -23,6 +23,7 @@ export class AccountService {
     var user = new UserModel();
     user.firstName = model.firstName;
     user.lastName = model.lastName;
+    user.isAdmin = model.isAdmin;
     user.id = model.id;
     this.loggedInUser.next(user);
     localStorage.setItem("token", model.accessToken);
@@ -41,6 +42,6 @@ export class AccountService {
   logOut(){
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-    location.reload();
+    location.replace("");
   }
 }

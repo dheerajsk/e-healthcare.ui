@@ -6,21 +6,21 @@
             </ng-container>
         </div>
         <div class="col-md-4">
-            <p-card header="Summary" [style]="{'width': '25rem', 'margin-bottom': '2em', height: '45%'}">
+            <p-card header="Summary" [style]="{'width': '25rem', 'margin-bottom': '2em', height: '55%'}">
                 <ng-template pTemplate="header">
                     <hr />
                 </ng-template>
                 <p>Total No of Items: {{cart.items.length}}</p>
                 <p>Total Amount: {{this.totalAmount}}</p>
                 <hr />
-                <p-button label="Place Order" (click)="handleRemoveClick()" icon="pi pi-times-circle"
+                <p-button label="Place Order" (click)="placeOrder()" icon="pi pi-check"
                     styleClass="p-button-raised p-button-warning"
                     [style]="{'margin-left': '.5em', align: 'center', float: 'right'}">
                 </p-button>
             </p-card>
         </div>
     </div>
-    <ng-container *ngIf="cart && cart.items.length==0">
+    <ng-container *ngIf="!cart || (cart && cart.items.length==0)">
         <div class="alert alert-primary" role="alert">
             No items in Cart. Please add some products in cart.
         </div>

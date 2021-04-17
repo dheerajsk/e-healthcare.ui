@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { CartService } from 'src/app/cart/cart.service';
 import { ProductModel } from 'src/app/product/product.model';
 
@@ -9,16 +10,17 @@ import { ProductModel } from 'src/app/product/product.model';
 })
 export class ProductCardComponent implements OnInit {
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private messageService: MessageService) { }
 
   @Input() product: ProductModel;
 
   ngOnInit(): void {
   }
 
-  handleAddToCartClick(){
+  handleAddToCartClick() {
     this.cartService.add(this.product.id).subscribe(
-      (res)=>{
+      (res) => {
+        alert('Item added to cart');
         this.cartService.notifyCartUpdate();
       }
     )

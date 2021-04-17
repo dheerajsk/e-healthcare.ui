@@ -19,6 +19,10 @@ export class ProductService {
     return this.http.get(this.env.url+"Product").pipe(map((res: ProductModel[])=> res));
   }
 
+  public getById(id: number){
+    return this.http.get(this.env.url+"Product/"+id).pipe(map((res: ProductModel)=> res));
+  }
+
   public add(record: ProductModel): Observable<any> {
 		return this.http.post(this.env.url+"Product", record, {
 			responseType: "text",

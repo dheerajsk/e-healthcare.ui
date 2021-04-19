@@ -32,4 +32,8 @@ export class LoginComponent implements OnInit {
       );
   }
 
+  handleRegisterClick(){
+    this.router.navigateByUrl("account/register");
+  }
+
 }

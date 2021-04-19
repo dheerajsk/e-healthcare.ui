@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
   }
 
   handleSignIn() {
-    this.router.navigateByUrl("login");
+    this.router.navigateByUrl("account/login");
   }
 
   handleSignOut(){

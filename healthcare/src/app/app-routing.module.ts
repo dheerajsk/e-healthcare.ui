@@ -5,7 +5,7 @@ import { MainAuthGuardService } from './shared/guard';
 
 const routes: Routes = [
   {
-    path: "login", component: ContainerComponent, loadChildren: () =>
+    path: "account", component: ContainerComponent, loadChildren: () =>
       import("./account/account.module").then((m) => m.AccountModule)
   },
   {

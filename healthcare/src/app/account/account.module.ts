@@ -7,10 +7,11 @@ import { AccountRoutingModule } from './account-routing.module';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule, SharedModule, FormsModule, CardModule, AccountRoutingModule, ButtonModule
   ]

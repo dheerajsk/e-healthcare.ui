@@ -14,6 +14,8 @@
                 <br />
                 <button type="button" pButton label="Sign In" icon="pi pi-user" style="margin-left:.25em; float: right"
                     (click)="handleLoginClick()"></button>
+                <button type="button" pButton label="Register" style="float: right; margin-left:.25em; float: right"
+                    (click)="handleRegisterClick()"></button>
             </div>
             <div class="alert alert-danger" role="alert" *ngIf="invalidCreds">
                 Incorrect Email or Password

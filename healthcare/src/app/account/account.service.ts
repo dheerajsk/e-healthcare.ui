@@ -16,10 +16,10 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   login(username, password) {
-    return this.http.post(this.env.url+"Account/Login" + "?email=" + username + "&password=" + password, {})
+    return this.http.post(this.env.url + "Account/Login" + "?email=" + username + "&password=" + password, {})
   }
 
-  updateLogginUser(model: any){
+  updateLogginUser(model: any) {
     var user = new UserModel();
     user.firstName = model.firstName;
     user.lastName = model.lastName;
@@ -30,18 +30,22 @@ export class AccountService {
     localStorage.setItem("user", JSON.stringify(user));
   }
 
-  getLoggedInUser(){
+  getLoggedInUser() {
     return this.loggedInUser.asObservable();
   }
 
-  getLoggedInUserSync(){
-    var user =  localStorage.getItem("user");
+  getLoggedInUserSync() {
+    var user = localStorage.getItem("user");
     return JSON.parse(user) as UserModel;
   }
 
-  logOut(){
+  logOut() {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
     location.replace("");
+  }
+
+  register(user: UserModel) {
+    return this.http.post(this.env.url + "Account/Register", user)
   }
 }
